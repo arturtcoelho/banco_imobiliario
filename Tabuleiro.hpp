@@ -1,11 +1,20 @@
 #ifndef TABULEIRO
 #define TABULEIRO
 
-const int NUM_POS = 20;
+#include <vector>
+#include "Propriedade.hpp"
+
 
 class Tabuleiro {
     public:
-        posicao *casas; // lista de predios
+        Tabuleiro();
+
+        std::vector<Propriedade> *propriedades; // lista de predios
+    
+        const int NUM_POS = 20;
+        
+    private:
+        void criaPropriedades();
 };
 
 #endif

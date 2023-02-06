@@ -1,15 +1,17 @@
-#include <Jogo.hpp>
+#include <iostream>
+#include <string>
+
+#include "Jogo.hpp"
 
 int main() {
 
-    Jogo *j = new jogo();
-    j->num_jogadores = 6;
-    j->turno = 0;
+    Jogo j{2};
 
     while (true) {
-        
+        j.passaTurno();
+        std::string wait;
+        std::cin >> wait;
     }
 
     return 0;
-
 }
